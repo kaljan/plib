@@ -1,0 +1,9 @@
+Debug/
+Release/
+.project
+.cproject
+*.[oa]
+*~
+*.launch
+.settings/
+src/test/temp.txt
