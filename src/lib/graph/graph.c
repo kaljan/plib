@@ -119,10 +119,11 @@ void graph_draw_char_5x8(graph_t * context, char c, int line, int offset, graph_
 				((color) ? pixfont5x8[c][i] : ~pixfont5x8[c][i]);
 			context->curr_frame->curr++;
 			if (context->curr_frame->curr >
-				(context->curr_frame->data + context->curr_frame->size)) {
+			(context->curr_frame->data + context->curr_frame->size)) {
 				context->curr_frame->curr = context->curr_frame->data;
 			}
 		}
+		*((uint8_t *)context->curr_frame->curr) = color ? 0 : 0xFF;
 	}
 }
 
@@ -151,7 +152,7 @@ void graph_draw_char_8x16(graph_t * context, char c, int line, int offset, graph
 					~((uint8_t)((pixfont8x16[c][i] & 0x00FF))));
 			context->curr_frame->curr++;
 			if (context->curr_frame->curr >
-				(context->curr_frame->data + context->curr_frame->size)) {
+			(context->curr_frame->data + context->curr_frame->size)) {
 				context->curr_frame->curr = context->curr_frame->data;
 			}
 		}
@@ -185,6 +186,7 @@ void graph_draw_string_5x8(graph_t * context, const char * str,
 	if (str) {
 		while (*str) {
 			graph_draw_char_5x8(context, *str, line, offset, color);
+
 			offset += 6;
 			if (offset > 127) {
 				offset = 0;

@@ -7,6 +7,7 @@
 #include "hal_dma.h"
 #include "hal_rcc.h"
 #include "hal_tim.h"
+#include "hal_qenc.h"
 
 extern hal_gpio_t led2_pb7;
 extern hal_gpio_t led3_pb14;
@@ -28,6 +29,11 @@ extern hal_dma_cfg_t dma2_stream6_cfg;
 
 extern hal_spi_dsc_t spi6_dsc;
 extern hal_spi_dsc_t * spi_list[];
+
+extern hal_gpio_t qencoder_a;
+extern hal_gpio_t qencoder_b;
+extern hal_qenc_t qencoder;
+
 //extern hal_if_t spi6_interface;
 
 #endif // HWPROF_HWPROF_H

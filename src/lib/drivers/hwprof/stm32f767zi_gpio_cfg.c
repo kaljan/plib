@@ -80,3 +80,21 @@ hal_gpio_t sh1106_reset = {
 	.af = 0,
 	.gpio = GPIOF,
 };
+
+hal_gpio_t qencoder_a = {
+	.pin = 9,
+	.value = true,
+	.type = ALTERNATE,
+	.otype = PUSH_PULL,
+	.af = 1,
+	.gpio = GPIOE,
+};
+
+hal_gpio_t qencoder_b = {
+	.pin = 11,
+	.value = true,
+	.type = ALTERNATE,
+	.otype = PUSH_PULL,
+	.af = 1,
+	.gpio = GPIOE,
+};

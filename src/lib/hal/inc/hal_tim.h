@@ -23,7 +23,6 @@ void hal_tim_enable(TIM_TypeDef * tim, _Bool enable);
 void hal_tim_set_prescaller(TIM_TypeDef * tim, uint32_t psc);
 void hal_tim_set_value(TIM_TypeDef * tim, uint32_t arr);
 void hal_tim_uie(TIM_TypeDef * tim, _Bool enable);
-void timer_irq_handler(TIM_TypeDef * tim, callback_t callback);
 
 hal_tim_t * hal_tim_get_context(int id);
 void hal_tim_irq_handler(hal_tim_t * timer);

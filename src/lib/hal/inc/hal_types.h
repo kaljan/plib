@@ -49,13 +49,13 @@ typedef struct _hal_interface_t {
 	void (*on_failed)(volatile void *, hal_error_t);
 } hal_interface_t;
 
-typedef struct _hal_slot_t {
-	hal_callback_t * on_success;
-	hal_callback_t * on_failed;
-} hal_slot_t;
+//typedef struct _hal_slot_t {
+//	hal_callback_t * on_success;
+//	hal_callback_t * on_failed;
+//} hal_slot_t;
 
-typedef void (*event_callback_t)(hal_event_t event);
-typedef void (*callback_t)(void);
+//typedef void (*event_callback_t)(hal_event_t event);
+//typedef void (*callback_t)(void);
 
 /**
  * Базовый интерфейс периферии.

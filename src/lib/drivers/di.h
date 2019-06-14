@@ -11,7 +11,7 @@ typedef struct _di_event_r {
 	_Bool prev_value;
 } di_event_t;
 
-void di_poll_add(hal_gpio_t * pin,
+void di_add_event(hal_gpio_t * pin,
 	void *(*callback)(hal_event_t, void *), void *context);
 void di_poll_event(void);
 
